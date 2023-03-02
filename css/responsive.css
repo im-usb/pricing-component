@@ -1,0 +1,58 @@
+@media only screen and (max-width: 480px) {
+    .main {
+        margin: 4.75vh 0 0 0;
+    }
+    
+    header {
+        margin: 0 0 60px 0;
+    }
+
+    .container .price-card .pricing {
+        display: block;
+        text-align: center;
+    }
+
+    .container .price-card .pricing .price {
+        display: none;
+    }
+
+    .container .price-card .pricing-mob {
+        display: block;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .container .price-card .pricing-mob .price-mob{
+        font-size: 40px;
+        font-weight: 800;
+        color: #2b3451;
+        margin: 0;
+    }
+
+    .container .price-card .toggle {
+        width: 80%; 
+        text-align: right;
+        margin: 0px 0 0 auto;
+        min-width: 260px;
+    }
+    .container .price-card .toggle p span.d1 {
+        display: none;
+    }
+
+    .container .price-card .toggle p span.d2{
+        display: inline;
+        color: #dca392;
+        padding: 2px;
+        background-color: #FFEFEB;
+        border-radius: 5px;
+        margin: 0 5px;
+    }
+
+    .container .price-card .offer {
+        flex-direction: column;
+    }
+
+    .container .price-card .offer ul {
+        margin: 0 0 30px 0;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <header>
+                <h1>Simple, traffic-based pricing</h1>
+                <p>Sign up for 30-day trial. No credit card required.</p>
+            </header>
+            <div class="price-card">
+                <div class="top">
+                    <div class="pricing">
+                        <p class="pageviews" ><span class="pageviews" id="pageviews">10K</span> PAGEVIEWS</p>
+                        <p class="price"><span class="price" id="price">$1.60</span><span id="bill-type"> /month</span></p>
+                    </div>
+                    <div class="slider">
+                        <input type="range" name="" id="range-slider" value="0" class="range-slider" min="10" max="999">
+                    </div>
+                    <div class="pricing-mob">
+                        <p class="price-mob"><span class="price-mob" id="price-mob">$1.60</span><span> /month</span></p>
+                    </div>
+                    <div class="toggle">
+                        <p>Monthly Billing</p>
+                        <input type="range" name="" class="toggle-btn" id="toggle-btn" value="1" min="1" max="2">
+                        <p>Yearly Billing <span class="discount d1"> 25% discount</span><span class="discount d2"> 25%</span></p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="offer">
+                        <div class="features">
+                            <ul>
+                                <li>Unlimited websites</li>
+                                <li>100% data ownership</li>
+                                <li>Email reports</li>
+                            </ul>
+                        </div>
+                        <a href="#">Start my trial!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

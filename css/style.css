@@ -1,0 +1,197 @@
+* {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #757B89;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg-pattern.svg) #f9faff;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main {
+    margin: 8.75vh 0 0 0;
+    background: url(../images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 45px 0 0 0;
+}
+
+.container {
+    max-width: 570px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    width: 100%;
+    margin: 0 0 90px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    color: #2b3451;
+    font-weight: 800;
+}
+
+header p {
+    text-align: center;
+    margin: 0;
+}
+
+.container .price-card {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 10px 25px -12px;
+}
+
+.container .price-card .top {
+    width: 100%;
+    padding: 50px 8.35% 40px;
+    border-bottom: 1px solid #F1F0F5;
+    box-sizing: border-box;
+}
+
+.container .price-card .bottom {
+    width: 100%;
+    padding: 36px 8.35% 32px;
+    box-sizing: border-box;
+}
+
+.container .price-card .pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 30px 0;
+}
+
+.container .price-card .pricing .pageviews{
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+}
+
+.container .price-card .pricing .price {
+    font-size: 40px;
+    font-weight: 800;
+    color: #2b3451;
+    margin: 0;
+}
+
+.container .price-card .pricing-mob {
+    display: none;
+}
+
+.container .price-card .slider {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.container .price-card .slider .range-slider{
+    width: 100%;
+    appearance: none;
+    background-color: #ecf3fd;
+    margin: 0;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.container .price-card .slider .range-slider::-webkit-slider-thumb {
+    appearance: none;
+    background: url('../images/icon-slider.svg') #11d8c5;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 22px 0;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.container .price-card .toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0px 20px 0 auto;
+}
+
+.container .price-card .toggle p {
+    font-size: 12px;
+}
+
+.container .price-card .toggle input{
+    appearance: none;
+    width: 40px;
+    background: #d1d8eb;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+.container .price-card .toggle input::-webkit-slider-thumb {
+    appearance: none;
+    width: 40%;
+    padding: 8px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.container .price-card .toggle p span{
+    font-size: 12px;
+}
+
+.container .price-card .toggle p span.d1 {
+    color: #dca392;
+    padding: 2px;
+    background-color: #FFEFEB;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.container .price-card .toggle p span.d2{
+    display: none;
+}
+
+.container .price-card .offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .price-card .offer ul {
+    list-style-type: none;
+    padding: 0 0 0 20px;
+}
+
+.container .price-card .offer ul li {
+    padding: 0 0 0 10px;
+}
+
+.container .price-card .offer ul li::marker{
+    color: #10D8C4;
+    content: '\2713';
+}
+
+.container .price-card .offer a {
+    background: #293356;
+    border: none;
+    padding: 15px 8.35%;
+    border-radius: 30px;
+    color: #d1d8eb;
+}
+
+.container .price-card .offer a:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
