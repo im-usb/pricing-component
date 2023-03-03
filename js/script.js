@@ -1,45 +1,52 @@
 function updateMonth() {
     let slider = document.getElementById("range-slider");
-    let bill = document.getElementById("range-slider").value;
-    let rate = (bill*0.16).toFixed(2);
-
-    slider.addEventListener("input",updateMonth);
-
+    let bill = slider.value;
+    let rate = (bill * 0.16).toFixed(2);
     document.getElementById("price").innerHTML = '$' + rate;
     document.getElementById("price-mob").innerHTML = '$' + rate;
-    document.getElementById("pageviews").innerHTML = bill + "K"
+    document.getElementById("pageviews").innerHTML = bill + "K";
 }
-
 
 function updateYear() {
     let slider = document.getElementById("range-slider");
-    let bill = document.getElementById("range-slider").value;
-    let rate = (bill*0.16*12).toFixed(2);
-    let finalRate = (rate - rate*0.25).toFixed(2);
-
-    slider.addEventListener("input",updateYear);
-
+    let bill = slider.value;
+    let rate = (bill * 0.16 * 12).toFixed(2);
+    let finalRate = (rate - rate * 0.25).toFixed(2);
     document.getElementById("price").innerHTML = '$' + finalRate;
     document.getElementById("price-mob").innerHTML = '$' + finalRate;
-    document.getElementById("pageviews").innerHTML = bill + "K"
+    document.getElementById("pageviews").innerHTML = bill + "K";
 }
 
-function billType(){
+function billType() {
     let btnValue = document.getElementById("toggle-btn").value;
-    let type = document.getElementById("toggle-btn");
-    type.addEventListener("input",billType);
-
-    if (btnValue == 2){
+    if (btnValue == 2) {
         document.getElementById("bill-type").innerHTML = '/year';
         document.getElementById("bill-type-mob").innerHTML = '/year';
-        updateYear();   
-    }
-    
-    else if(btnValue == 1){
+        let slider = document.getElementById("range-slider");
+        slider.removeEventListener("input", updateMonth);
+        slider.addEventListener("input", updateYear);
+        updateYear();
+    } else if (btnValue == 1) {
         document.getElementById("bill-type").innerHTML = '/month';
         document.getElementById("bill-type-mob").innerHTML = '/month';
+        let slider = document.getElementById("range-slider");
+        slider.removeEventListener("input", updateYear);
+        slider.addEventListener("input", updateMonth);
         updateMonth();
     }
+}
+
+function addEventListeners() {
+    let slider = document.getElementById("range-slider");
+    let toggleBtn = document.getElementById("toggle-btn");
+
+    slider.addEventListener("input", function() {
+        updateMonth();
+    });
+
+    toggleBtn.addEventListener("input", function() {
+        billType();
+    });
 }
 
 var sliderColor = document.querySelector('.range-slider');
@@ -49,9 +56,10 @@ sliderColor.addEventListener('input', function() {
 });
 
 var toggleColor = document.querySelector('.toggle-btn');
-toggleColor.addEventListener('input', function(){
+toggleColor.addEventListener('input', function() {
     var value2 = (toggleColor.value - toggleColor.min) / (toggleColor.max - toggleColor.min) * 100;
     toggleColor.style.background = 'linear-gradient(to right, #10d8c4 0%, #10d8c4 ' + value2 + '%, #ddd ' + value2 + '%, #ddd 100%)';
 });
 
+addEventListeners();
 billType();
